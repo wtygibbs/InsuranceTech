@@ -1,0 +1,94 @@
+@page
+@model InsuranceTech.Pages.Insured.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Insurance</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Insurance.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Insurance.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Insurance.Address1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Insurance.Address1)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Insurance.Address2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Insurance.Address2)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Insurance.City)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Insurance.City)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Insurance.State)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Insurance.State)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Insurance.ZipCode)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Insurance.ZipCode)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Insurance.EffectiveDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Insurance.EffectiveDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Insurance.ExpirationDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Insurance.ExpirationDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Insurance.TotalInsuredValue)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Insurance.TotalInsuredValue)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Insurance.Business)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Insurance.Business)
+        </dd>
+        @*<dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Insurance.Rate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Insurance.Rate)
+        </dd>*@
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Insurance.Premium)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Insurance.Premium)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Insurance.ID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

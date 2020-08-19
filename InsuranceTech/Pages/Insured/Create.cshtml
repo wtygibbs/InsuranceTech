@@ -1,0 +1,89 @@
+@page
+@model InsuranceTech.Pages.Insured.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Insurance</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Insurance.Name" class="control-label"></label>
+                <input asp-for="Insurance.Name" class="form-control" />
+                <span asp-validation-for="Insurance.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Insurance.Address1" class="control-label"></label>
+                <input asp-for="Insurance.Address1" class="form-control" />
+                <span asp-validation-for="Insurance.Address1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Insurance.Address2" class="control-label"></label>
+                <input asp-for="Insurance.Address2" class="form-control" />
+                <span asp-validation-for="Insurance.Address2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Insurance.City" class="control-label"></label>
+                <input asp-for="Insurance.City" class="form-control" />
+                <span asp-validation-for="Insurance.City" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Insurance.State" class="control-label"></label>
+                <input asp-for="Insurance.State" class="form-control" />
+                <span asp-validation-for="Insurance.State" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Insurance.ZipCode" class="control-label"></label>
+                <input asp-for="Insurance.ZipCode" class="form-control" />
+                <span asp-validation-for="Insurance.ZipCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Insurance.EffectiveDate" class="control-label"></label>
+                <input asp-for="Insurance.EffectiveDate" class="form-control" />
+                <span asp-validation-for="Insurance.EffectiveDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Insurance.ExpirationDate" class="control-label"></label>
+                <input asp-for="Insurance.ExpirationDate" class="form-control" />
+                <span asp-validation-for="Insurance.ExpirationDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Insurance.TotalInsuredValue" class="control-label"></label>
+                <input asp-for="Insurance.TotalInsuredValue" class="form-control" />
+                <span asp-validation-for="Insurance.TotalInsuredValue" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+                <label asp-for="Insurance.Rate" class="control-label"></label>
+                <input asp-for="Insurance.Rate" class="form-control" />
+                <span asp-validation-for="Insurance.Rate" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <label asp-for="Insurance.Business" class="control-label"></label>
+                <select asp-for="Insurance.Business" asp-items="Html.GetEnumSelectList<InsuranceTech.Models.Insurance.EnumBusiness>()" class="form-control"></select>
+                <span asp-validation-for="Insurance.Business" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+                <label asp-for="Insurance.Premium" class="control-label"></label>
+                <input asp-for="Insurance.Premium" class="form-control" />
+                <span asp-validation-for="Insurance.Premium" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
