@@ -16,7 +16,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.Insurance[0].Name)
             </th>
-            <th>
+            @*<th>
                 @Html.DisplayNameFor(model => model.Insurance[0].Address1)
             </th>
             <th>
@@ -36,7 +36,7 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Insurance[0].ExpirationDate)
-            </th>
+            </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.Insurance[0].TotalInsuredValue)
             </th>
@@ -44,10 +44,13 @@
                 @Html.DisplayNameFor(model => model.Insurance[0].Business)
             </th>
             @*<th>
-                @Html.DisplayNameFor(model => model.Insurance[0].Rate)
-            </th>*@
+            @Html.DisplayNameFor(model => model.Insurance[0].Rate)
+        </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.Insurance[0].Premium)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Insurance[0].TRIAPremium)
             </th>
             <th></th>
         </tr>
@@ -58,7 +61,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
-            <td>
+            @*<td>
                 @Html.DisplayFor(modelItem => item.Address1)
             </td>
             <td>
@@ -78,7 +81,7 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.ExpirationDate)
-            </td>
+            </td>*@
             <td>
                 @Html.DisplayFor(modelItem => item.TotalInsuredValue)
             </td>
@@ -86,10 +89,13 @@
                 @Html.DisplayFor(modelItem => item.Business)
             </td>
             @*<td>
-                @Html.DisplayFor(modelItem => item.Rate)
-            </td>*@
+            @Html.DisplayFor(modelItem => item.Rate)
+        </td>*@
             <td>
                 @Html.DisplayFor(modelItem => item.Premium)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TRIAPremium)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
