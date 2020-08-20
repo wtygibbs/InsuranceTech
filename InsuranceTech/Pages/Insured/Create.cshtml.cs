@@ -37,6 +37,7 @@ namespace InsuranceTech.Pages.Insured
             }
 
             Insurance.Premium = Insurance.calculatePremium(Insurance.State, Insurance.TotalInsuredValue, Insurance.Rate);
+            Insurance.TRIAPremium = Insurance.calculateTriaPremium(Insurance.Premium);
 
             _context.Insured.Add(Insurance);
             
