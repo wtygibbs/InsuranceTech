@@ -28,6 +28,7 @@ namespace InsuranceTech.Models
             ErrorMessage = "Invalid state format.")]
         public string State { get; set; }
 
+        [Required(ErrorMessage = "Zip Code is Required.")]
         [RegularExpression("^[0-9]{5}(?:-[0-9]{4})?$", 
             ErrorMessage = "Zip code must be in either five digit(12345) or nine digit(12345-6789) form.")]
         [Display(Name = "Zip Code")]
