@@ -53,6 +53,7 @@ namespace InsuranceTech.Models
         {
             Corporation,
             Partnership,
+            [Display(Name = "Limited Liability Company")]
             LimitedLiabilityCompany,
             LLC
         }
@@ -61,6 +62,10 @@ namespace InsuranceTech.Models
 
         [DisplayFormat(DataFormatString = "{0:$0.00}")]
         public decimal Premium { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:$0.00}")]
+        [Display(Name = "TRIA Premium")]
+        public decimal TRIAPremium { get; set; }
 
         public Insurance()
         { 
@@ -74,6 +79,11 @@ namespace InsuranceTech.Models
             }
 
             return (tiv * r) / 100;
+        }
+
+        public decimal calculateTriaPremium(decimal p)
+        {
+            return (115 * p) / 100;
         }
     }
 }
